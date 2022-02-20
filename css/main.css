@@ -1,5 +1,7 @@
 /* Start Root  */
-
+    :root{
+        --color: white;
+    }
 /* End Root  */
 
 /* Start Global Rules */
