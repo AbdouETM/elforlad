@@ -24,9 +24,25 @@ body{
     font-weight: bold;
     color: white;
     text-transform: uppercase;
+    margin-bottom: 35px;
 }
 .main-head span{
     color: orange;
+}
+.btn{
+    display: inline-block;
+    width: 180px;
+    height: 60px;
+    border: none;
+    outline: none;
+    background-color: #EE580F;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    line-height: 60px;
+    border-radius: 30px;
+    cursor: pointer;
 }
 
 /* End Global Rules */
@@ -199,6 +215,7 @@ nav .bars{
     }
     .logo{
         width: 100%;
+        margin-top: 15px;
     }
     nav{
         width: 100%;
@@ -268,12 +285,19 @@ nav .bars{
     text-align: center;
 }
 
+
 @media (max-width:767px){
     .landing-text{
         width: 100%;
     }
     .main-head{
         font-size: 45px;
+    }
+    .btn{
+        width: 140px;
+        height: 50px;
+        font-size: 18px;
+        line-height: 50px;
     }
 }
 /* End landing */
