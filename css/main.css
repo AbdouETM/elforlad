@@ -13,7 +13,7 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 .container{
-    padding: 0 100px;
+    padding: 0 60px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -32,7 +32,7 @@ body{
 .btn{
     display: inline-block;
     width: 180px;
-    height: 60px;
+    height: 50px;
     border: none;
     outline: none;
     background-color: #EE580F;
@@ -40,9 +40,13 @@ body{
     font-size: 20px;
     text-align: center;
     text-transform: capitalize;
-    line-height: 60px;
+    line-height: 50px;
     border-radius: 30px;
     cursor: pointer;
+    transition: 0.3s ease;
+}
+.btn:hover{
+    background-color: #15CFE5;
 }
 
 /* End Global Rules */
@@ -273,7 +277,7 @@ nav .bars{
 .landing{
     background-image: url(../images/bk.jpg);
     background-size: cover;
-    height: calc(100vh - 130px);
+    height: calc(100vh - 122px);
     position: relative;
 }
 .landing-text{
@@ -284,7 +288,53 @@ nav .bars{
     transform: translate(-50%, -20%);
     text-align: center;
 }
+.landing .catalog{
+    width: 72%;
+    height: 210px;
+    position: absolute;
+    bottom: 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(220px, 1fr));
+    background-color: white;
+    padding: 40px;
+}
+.landing .catalog::before{
+    content: "Find Your Tour";
+    width: 220px;
+    height: 50px;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    background-color: white;
+    font-size: 20px;
+    color: #1e3c72;
+    text-align: center;
+    line-height: 50px;
 
+}
+.landing .catalog-text{
+    display: flex;
+    flex-direction: column;
+}
+.landing .catalog label{
+    font-size: 16px;
+    color: #666;
+    margin: 10px 0;
+    font-family: inherit;
+}
+.landing .catalog input{
+    outline: none;
+    width: 80%;
+    height: 40px;
+    opacity: 0.5;
+    font-size: 18px;
+    padding: 10px;
+}
+.landing .catalog .btn{
+    border-radius: 0;
+    margin-top: 70px;
+    width: 220px;
+}
 
 @media (max-width:767px){
     .landing-text{
@@ -298,6 +348,9 @@ nav .bars{
         height: 50px;
         font-size: 18px;
         line-height: 50px;
+    }
+    .landing .catalog{
+        display: none;
     }
 }
 /* End landing */
