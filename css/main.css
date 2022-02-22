@@ -13,25 +13,25 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 .container{
-    padding: 0 60px;
+    padding: 0 30px;
     margin-left: auto;
     margin-right: auto;
 }
 .main-head{
     margin: 0;
     font-family: inherit;
-    font-size: 100px;
+    font-size: 115px;
     font-weight: bold;
     color: white;
     text-transform: uppercase;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
 }
 .main-head span{
     color: orange;
 }
 .btn{
     display: inline-block;
-    width: 180px;
+    width: 200px;
     height: 50px;
     border: none;
     outline: none;
@@ -41,7 +41,6 @@ body{
     text-align: center;
     text-transform: capitalize;
     line-height: 50px;
-    border-radius: 30px;
     cursor: pointer;
     transition: 0.3s ease;
 }
@@ -77,14 +76,14 @@ header{
     overflow-x: hidden;
 }
 .logo{
-    width: 40%;
+    width: 35%;
     display: flex;
     justify-content: center;
     align-items: center;
     animation: slide 0.5s forwards;
 }
 nav{
-    width: 60%;
+    width: 65%;
     position: relative;
     
 }
@@ -109,7 +108,7 @@ nav .icon i{
     display: inline-block;
     font-size: 18px;
     color: #2a5298;
-    margin-right: 15px;
+    margin-right: 50px;
     animation: nav 0.5s forwards;
 }
 nav .icon i span{
@@ -120,13 +119,13 @@ nav .icon i span{
 }
 nav ul{
     display: flex;
-    margin-left: 200px;
+    margin-left: 220px;
     position: relative;
     
 }
 nav ul li{
     list-style: none;
-    padding: 20px;
+    padding: 20px 25px;
     transform: translateX(1000%);
     animation: slide-nav 0.5s forwards;
 }
@@ -151,7 +150,7 @@ nav ul li a::after{
     width: 100%;
     height: 3px;
     background-color: #EF6D6D;
-    transform: scale(0);
+    transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.3s ease;
 }
@@ -281,61 +280,62 @@ nav .bars{
     position: relative;
 }
 .landing-text{
-    width: 800px;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -20%);
     text-align: center;
+    height: 370px;
+    width: 1000px;
+    padding-top: 30px;
+}
+.landing-text .btn{
+    border-radius: 30px;
+    width: 180px;
 }
 .landing .catalog{
-    width: 72%;
-    height: 210px;
-    position: absolute;
-    top: 68%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(220px, 1fr));
     background-color: white;
-    padding: 40px;
+    width: 100%;
+    height: 237px;
+    margin-top: 50px;
+    position: relative;
+    
 }
 .landing .catalog::before{
     content: "Find Your Tour";
-    width: 220px;
-    height: 28vh;
+    font-size: 20px;
+    font-family: inherit;
+    font-weight: bold;
+    padding: 15px 30px;
     position: absolute;
     top: -50px;
     left: 0;
-    background-color: white;
-    font-size: 20px;
     color: #1e3c72;
-    text-align: center;
-    line-height: 50px;
-
+    background-color: white;
 }
-.landing .catalog-text{
-    display: flex;
-    flex-direction: column;
+.landing .catalog .catalog-text{
+    padding-top: 20px;
+    padding-left: 20px;
+    width: 25%;
+    display: inline-block;
 }
-.landing .catalog label{
+.landing .catalog .catalog-text label{
+    display: block;
     font-size: 16px;
-    color: #666;
-    margin: 10px 0;
-    font-family: inherit;
+    color: #777;
+    padding-bottom: 10px;
 }
-.landing .catalog input{
-    outline: none;
-    width: 80%;
-    height: 40px;
-    opacity: 0.5;
-    font-size: 18px;
+.landing .catalog .catalog-text input,
+.landing .catalog .catalog-text select{
     padding: 10px;
+    font-size: 18px;
+    outline: none;
+    color: #000;
+    opacity: 0.5;
+    width: 100%;
 }
 .landing .catalog .btn{
-    border-radius: 0;
-    margin-top: 70px;
-    width: 220px;
+    position: relative;
+    bottom: 50px;
+    left: 20px;
+    width: 18%;
 }
-
 @media (max-width:767px){
     .landing-text{
         width: 100%;
