@@ -20,7 +20,7 @@ body{
 .main-head{
     margin: 0;
     font-family: inherit;
-    font-size: 115px;
+    font-size: 90px;
     font-weight: bold;
     color: white;
     text-transform: uppercase;
@@ -31,8 +31,8 @@ body{
 }
 .btn{
     display: inline-block;
-    width: 200px;
-    height: 50px;
+    width: 180px;
+    height: 55px;
     border: none;
     outline: none;
     background-color: #EE580F;
@@ -41,6 +41,7 @@ body{
     text-align: center;
     text-transform: capitalize;
     line-height: 50px;
+    border-radius: 30px;
     cursor: pointer;
     transition: 0.3s ease;
 }
@@ -281,14 +282,13 @@ nav .bars{
 }
 .landing-text{
     text-align: center;
-    height: 370px;
-    width: 1000px;
+    height: 375px;
+    width: 70%;
     padding-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
 }
-.landing-text .btn{
-    border-radius: 30px;
-    width: 180px;
-}
+
 .landing .catalog{
     background-color: white;
     width: 100%;
@@ -331,20 +331,24 @@ nav .bars{
     width: 100%;
 }
 .landing .catalog .btn{
+    width: 200px;
     position: relative;
     bottom: 50px;
     left: 20px;
     width: 18%;
+    border-radius: 0px;
 }
 @media (max-width:767px){
     .landing{
-        height: 200px;
+        height: 60%;
     }
     .landing-text{
-        width: 100%;
+        width: 81%;
+        margin: auto;
+        padding-top: 50px;
     }
     .main-head{
-        font-size: 45px;
+        font-size: 60px;
     }
     .btn{
         width: 140px;
@@ -356,5 +360,109 @@ nav .bars{
         display: none;
     }
 }
+@media (min-width:767px) and (max-width:991px){
+    .main-head{
+        font-size: 68px;
+    }
+    .landing-text{
+        height: 325px;
+    }
+    .landing .catalog{
+        margin-top: 0;
+    }
+}
+
+
 /* End landing */
+
+/* Start About */
+.about{
+    height: 100vh;
+    position: relative;
+}
+.head{
+    text-align: center;
+    padding-top: 50px;
+}
+.head-text{
+    font-size: 45px;
+    font-family: inherit;
+    font-weight: bolder;
+    position: relative;
+}
+.head-text::before{
+    content: "";
+    width: 15%;
+    height: 1px;
+    background-color: green;
+    position: absolute;
+    top: 25px;
+    left: 60px;
+}
+.head-text::after{
+    content: "";
+    width: 15%;
+    height: 1px;
+    background-color: green;
+    position: absolute;
+    top: 25px;
+    right: 60px;
+}
+.p-text{
+    margin-top: 20px;
+    font-size: 19px;
+    font-family: inherit;
+}
+.about-text{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    margin-top: 120px;
+    padding: 30px;
+    border: 20px solid;
+    border-image: linear-gradient(to right, #2a5298, #1e3c72) 20;
+    position: relative;
+}
+.about-text p{
+    width: 60%;
+    font-size: 18px;
+    line-height: 1.8;
+    font-family: inherit;
+    font-weight: 300;
+}
+.about-text .image{
+    width: 40%; 
+    position: absolute;
+    top: -30%;
+    right: 8%;
+}
+.about-btn{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+@media (max-width:1199px){
+    .head-text{
+        font-size: 30px;
+    }
+    .head-text::before,
+    .head-text::after{
+        display: none;
+    }
+    .about-text{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        
+    }
+    .about-text p{
+        width: 100%;
+    }
+    .about-text .image{
+        display: none;
+    }
+}
+
+/* End About */
 
