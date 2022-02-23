@@ -1,6 +1,3 @@
-/* Start Root  */
-
-/* End Root  */
 
 /* Start Global Rules */
 *{
@@ -16,6 +13,10 @@ body{
     padding: 0 30px;
     margin-left: auto;
     margin-right: auto;
+}
+.about,.travel,.weekend,.tours,.amazing,.blog,footer{
+    position: relative;
+    margin-top: 80px;
 }
 .main-head{
     margin: 0;
@@ -47,6 +48,32 @@ body{
 }
 .btn:hover{
     background-color: #15CFE5;
+}
+
+.head{
+    text-align: center;
+}
+.head-text{
+    font-size: 45px;
+    font-family: inherit;
+    font-weight: bolder;
+    position: relative;
+}
+
+.head-text::after{
+    content: "";
+    width: 10%;
+    height: 4px;
+    background-color: green;
+    position: absolute;
+    bottom: -20px;
+    left: 45%;
+}
+.p-text{
+    margin-top: 50px;
+    font-size: 19px;
+    line-height: 1.8;
+    font-family: inherit;
 }
 
 /* End Global Rules */
@@ -277,7 +304,6 @@ nav .bars{
 .landing{
     background-image: url(../images/bk.jpg);
     background-size: cover;
-    height: calc(100vh - 122px);
     position: relative;
 }
 .landing-text{
@@ -340,7 +366,9 @@ nav .bars{
 }
 @media (max-width:767px){
     .landing{
-        height: 60%;
+        display: grid;
+        place-items: center;
+
     }
     .landing-text{
         width: 81%;
@@ -376,43 +404,7 @@ nav .bars{
 /* End landing */
 
 /* Start About */
-.about{
-    height: 100vh;
-    position: relative;
-}
-.head{
-    text-align: center;
-    padding-top: 50px;
-}
-.head-text{
-    font-size: 45px;
-    font-family: inherit;
-    font-weight: bolder;
-    position: relative;
-}
-.head-text::before{
-    content: "";
-    width: 10%;
-    height: 1px;
-    background-color: green;
-    position: absolute;
-    top: 25px;
-    left: 80px;
-}
-.head-text::after{
-    content: "";
-    width: 10%;
-    height: 1px;
-    background-color: green;
-    position: absolute;
-    top: 25px;
-    right: 80px;
-}
-.p-text{
-    margin-top: 20px;
-    font-size: 19px;
-    font-family: inherit;
-}
+
 .about-text{
     width: 90%;
     height: 100%;
@@ -454,10 +446,12 @@ nav .bars{
         margin-left: auto;
         margin-right: auto;
         margin-top: 30px;
+        padding: 15px;
         
     }
     .about-text p{
         width: 100%;
+        font-size: 16px;
     }
     .about-text .image{
         display: none;
@@ -495,10 +489,213 @@ nav .bars{
 /* Start weekend */
 .weekend-image{
     width: 100%;
-    height: 181px;
-    background-image: url("../images/London.jpg");
-    background-size: cover;
-    
+    height: 181px; 
+    margin-top: 45px;
+}
+.weekend-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 /* End weekend */
+/* Start tours */
+.tours-ctn{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
+    gap: 40px;
+}
+
+.tours-ctn .card h4{
+    padding-top: 15px;
+    padding-left: 15px;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #444;
+}
+.tours-ctn .card p{
+    padding-top: 15px;
+    padding-left: 15px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #777;
+}
+@media (max-width:767px){
+    .tours-ctn{
+        text-align: center;
+    }
+}
+/* End tours */
+/* Start amazing */
+.amazing{
+    width: 100%;
+    background-image: url("../images/Amazing.jpg");
+    background-size: cover;
+}
+.amazing .head{
+    padding: 80px 0;
+    color: white;
+}
+.amazing .head .btn{
+    margin-top: 40px;
+    margin-left: 30px;
+}
+/* End amazing */
+/* Start blog */
+.blog-ctn{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(380px,1fr));
+    gap: 60px;
+}
+.blog-ctn .card .imgs{
+    width: 100%;
+    position: relative;
+}
+.blog-ctn .card .imgs::before{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 130px;
+    height: 45px;
+    background-color: #1e3c72;
+    text-align: center;
+    line-height: 45px;
+    color: white;
+    font-size: 16px;
+}
+.blog-ctn .card .one::before{
+    content: "4 Feb 2019";
+}
+.blog-ctn .card .two::before{
+    content: "10 Feb 2019";
+}
+.blog-ctn .card .imgs img{
+    width: 100%;
+}
+.card-info{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5px;
+}
+.card-info span{
+    color: #15CFE5;
+    font-size: 16px;
+}
+.card-info .comment .one,
+.card-info .comment .two{
+    display: inline-block;
+    color: #444;
+    padding-left: 10px;
+    position: relative;
+    margin-left: 30px;
+}
+.card-info .comment .one::before,
+.card-info .comment .two::before{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: -15px;
+    font-size: 18px;
+    color: #15CFE5;
+}
+.card-info .comment .one::before{content: "05";}
+.card-info .comment .two::before{content: "06";}
+
+.blog-ctn .content{
+    margin-top: 25px;
+    width: 100%;
+}
+.blog-ctn .content h4{
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #444;
+}
+.blog-ctn .content p{
+    padding-top: 15px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #777;
+}
+/* End blog */
+/* Start footer */
+footer{
+    background-color: #1e3c72;
+}
+.footer-ctn{
+    padding-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-card{
+    margin-right: 50px;
+}
+.footer-card:last-child{
+    flex: 1;
+    margin-right: 0;
+}
+.footer-head{
+    font-size: 24px;
+    color: white;
+    margin: 20px 0;
+}
+
+.text{
+    display: block;
+    font-size: 20px;
+    color: white;
+    padding: 10px 0;
+}
+.text a{
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+.text a:hover{
+    color: #15CFE5;
+}
+.footer-card input{
+    width: 45%;
+    padding: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    outline: none;
+}
+.footer-card input:last-child{
+    margin-right: 0;
+}
+.footer-card textarea{
+    width: 94%;
+    padding: 10px;
+}
+.p-txt{
+    text-align: center;
+    margin-top: 40px;
+    padding-bottom: 20px;
+    border-top: 1px solid white;
+    transform: translateX(50%);
+    width: 50%;
+}
+.p-txt p{
+    padding: 20px;
+    color: white;
+} 
+.p-txt p span{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.p-txt p span:hover{
+    color: #15CFE5;
+}
+
+@media (max-width:767px){
+    .footer-card,
+    .footer-card input,
+    .footer-card textarea{
+        width: 100%;
+    }
+}
+
+/* End footer */
 
